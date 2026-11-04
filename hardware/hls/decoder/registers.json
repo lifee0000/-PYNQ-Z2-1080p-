@@ -1,0 +1,16 @@
+{
+  "vlnv": "lifee.fpga:codec:p6_rice_decode_slice:4.0",
+  "registers": {
+    "input_r": 16,
+    "output_r": 28,
+    "encoded_size": 40,
+    "capacity_bytes": 48,
+    "slice_index": 56,
+    "decoded_size": 64,
+    "error_code": 80
+  },
+  "ip_sha256": "80bf3d8628bed0fc6ce5302ba28d5e8cf9f2b32d13c180c2dcb00e023ee2c20a",
+  "source_sha256": "ed62b29e35415172034ce746b6efa3c90264b39e573f3a2bd8a57f2179a34f86",
+  "source": "hardware/hls/decoder/rice_decoder.cpp",
+  "status": "CSIM_SYNTH_COSIM_EXPORT_PASS_1080P_RICE_LAYOUT2"
+}

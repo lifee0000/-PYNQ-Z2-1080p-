@@ -1,0 +1,18 @@
+{
+  "vlnv": "lifee.fpga:codec:p6_rice_encode:5.0",
+  "registers": {
+    "input_r": 16,
+    "output_r": 28,
+    "method": 40,
+    "capacity_bytes": 48,
+    "quant_shift": 56,
+    "encoded_size": 64,
+    "error_code": 80,
+    "width": 96,
+    "height": 104
+  },
+  "ip_sha256": "91be2a855215bd82d3c96563df36bf893f59912a8d27367cdf0368abecc1992d",
+  "source_sha256": "e1a5d77a74b9ffb0a1d94384e5f467f7bdc261e0fc5d26e3346f4eac2941724e",
+  "source": "hardware/hls/encoder_tans/tans_encoder.cpp",
+  "status": "CSIM_72_CASES_SYNTH_PASS_INPUT_BURSTS_P6TANS02_COSIM_PENDING"
+}

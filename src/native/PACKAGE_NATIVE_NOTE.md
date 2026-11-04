@@ -1,0 +1,1 @@
+本升级候选使用配置 ABI 2、21 参数和 PZYUV4S v3；新增 LZ4 独立块与原始数据 XXH32 校验，须重新生成 PC/ARM 库及匹配清单。升级前 v2 的 161 组像素和 10 项 mock 结果是历史证据，不能证明本候选通过。当前验收以此次实际生成的测试记录为准。BIT/HWH 和 FPGA 图像算法未因此改变。旧 20 参数说明及 host_checks.json 属于更早集成前记录，见 PACKAGE_NATIVE_NOTE_BEFORE_INTEGRATION.md。

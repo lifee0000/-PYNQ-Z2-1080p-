@@ -1,0 +1,853 @@
+﻿
+****** vitis-run v2026.1 (64-bit)
+  **** SW Build 6511674 on 2026-06-16-13:14:00
+  **** Start of session at: Tue Oct 27 08:58:43 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2026.1 6493734
+
+Sourcing Tcl script 'R:/build_hls.tcl'
+
+INFO: [HLS 200-1510] Running: open_project -reset R://build/yuyv422_v4_split_hls 
+
+WARNING: [HLS 200-2182] The 'yuyv422_v4_split_hls' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+
+INFO: [HLS 200-10] Opening and resetting solution 'R:/build/yuyv422_v4_split_hls'.
+
+INFO: [HLS 200-1510] Running: set_top video_enhance_yuyv422_v4_split_core 
+
+INFO: [HLS 200-1510] Running: add_files R://hls/spatial_v4.cpp -cflags -std=c++17 
+
+INFO: [HLS 200-10] Adding design file 'R://hls/spatial_v4.cpp' to the project
+
+INFO: [HLS 200-1510] Running: add_files -tb R://hls/testbench.cpp -cflags -std=c++17 
+
+INFO: [HLS 200-10] Adding test bench file 'R://hls/testbench.cpp' to the project
+
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+
+INFO: [HLS 200-10] Creating and opening solution 'R:/build/yuyv422_v4_split_hls/solution1'.
+
+INFO: [HLS 200-10] Cleaning up the solution database.
+
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+
+WARNING: [HLS 200-2149] The 'flow_target' option is deprecated and will be removed in a future release. For 'vivado' value you may simply remove the option for equivalent behavior.
+
+WARNING: [HLS 200-484] The 'open_solution -flow_target' command is deprecated and will be removed in a future release.
+
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+
+INFO: [HLS 200-1510] Running: csim_design 
+
+INFO: [SIM 211-2] *************** CSIM start ***************
+
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+
+   Compiling ../../../../../hls/testbench.cpp in debug mode
+   Compiling ../../../../../hls/spatial_v4.cpp in debug mode
+   Generating csim.exe
+In file included from ../../../../../hls/testbench.cpp:1:
+In file included from ../../../../../hls/spatial_v4.h:4:
+In file included from D:/FPGA/2026.1/Vitis/include\ap_int.h:10:
+In file included from D:/FPGA/2026.1/Vitis/include\etc/ap_common.h:668:
+In file included from D:/FPGA/2026.1/Vitis/include\etc/ap_private.h:68:
+In file included from D:/FPGA/2026.1/Vitis/include\hls_half.h:26:
+In file included from D:/FPGA/2026.1/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/FPGA/2026.1/Vitis/include\hls_fpo.h:140:
+In file included from D:/FPGA/2026.1/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/FPGA/2026.1/Vitis/include\gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/FPGA/2026.1/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+In file included from ../../../../../hls/spatial_v4.cpp:1:
+In file included from ../../../../../hls/spatial_v4.h:4:
+In file included from D:/FPGA/2026.1/Vitis/include\ap_int.h:10:
+In file included from D:/FPGA/2026.1/Vitis/include\etc/ap_common.h:668:
+In file included from D:/FPGA/2026.1/Vitis/include\etc/ap_private.h:68:
+In file included from D:/FPGA/2026.1/Vitis/include\hls_half.h:26:
+In file included from D:/FPGA/2026.1/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/FPGA/2026.1/Vitis/include\hls_fpo.h:140:
+In file included from D:/FPGA/2026.1/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/FPGA/2026.1/Vitis/include\gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/FPGA/2026.1/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+YUYV_VECTOR_PASS 0 pixels=48 frames=1 errors=0
+
+YUYV_VECTOR_PASS 1 pixels=48 frames=2 errors=0
+
+YUYV_VECTOR_PASS 2 pixels=48 frames=3 errors=0
+
+YUYV_VECTOR_PASS 3 pixels=48 frames=4 errors=0
+
+YUYV_VECTOR_PASS 4 pixels=48 frames=5 errors=0
+
+YUYV_VECTOR_PASS 5 pixels=48 frames=6 errors=0
+
+YUYV_VECTOR_PASS 6 pixels=12 frames=7 errors=0
+
+YUYV_VECTOR_PASS 7 pixels=12 frames=8 errors=0
+
+YUYV_VECTOR_PASS 8 pixels=12 frames=9 errors=0
+
+YUYV_VECTOR_PASS 9 pixels=12 frames=10 errors=0
+
+YUYV_VECTOR_PASS 10 pixels=12 frames=11 errors=0
+
+YUYV_VECTOR_PASS 11 pixels=12 frames=12 errors=0
+
+YUYV_VECTOR_PASS 12 pixels=12 frames=13 errors=0
+
+YUYV_VECTOR_PASS 13 pixels=12 frames=14 errors=0
+
+YUYV_VECTOR_PASS 14 pixels=12 frames=15 errors=0
+
+YUYV_VECTOR_PASS 15 pixels=12 frames=16 errors=0
+
+YUYV_VECTOR_PASS 16 pixels=12 frames=17 errors=0
+
+YUYV_VECTOR_PASS 17 pixels=12 frames=18 errors=0
+
+YUYV_VECTOR_PASS 18 pixels=12 frames=19 errors=0
+
+YUYV_VECTOR_PASS 19 pixels=12 frames=20 errors=0
+
+YUYV_VECTOR_PASS 20 pixels=12 frames=21 errors=0
+
+YUYV_VECTOR_PASS 21 pixels=12 frames=22 errors=0
+
+YUYV_VECTOR_PASS 22 pixels=12 frames=23 errors=0
+
+YUYV_VECTOR_PASS 23 pixels=12 frames=24 errors=0
+
+YUYV_VECTOR_PASS 24 pixels=12 frames=25 errors=0
+
+YUYV_VECTOR_PASS 25 pixels=12 frames=26 errors=0
+
+YUYV_VECTOR_PASS 26 pixels=12 frames=27 errors=0
+
+YUYV_VECTOR_PASS 27 pixels=12 frames=28 errors=0
+
+YUYV_VECTOR_PASS 28 pixels=12 frames=29 errors=0
+
+YUYV_VECTOR_PASS 29 pixels=12 frames=30 errors=0
+
+YUYV_VECTOR_PASS 30 pixels=12 frames=31 errors=0
+
+YUYV_VECTOR_PASS 31 pixels=12 frames=32 errors=0
+
+YUYV_VECTOR_PASS 32 pixels=12 frames=33 errors=0
+
+YUYV_VECTOR_PASS 33 pixels=12 frames=34 errors=0
+
+YUYV_VECTOR_PASS 34 pixels=12 frames=35 errors=0
+
+YUYV_VECTOR_PASS 35 pixels=12 frames=36 errors=0
+
+YUYV_VECTOR_PASS 36 pixels=30 frames=37 errors=0
+
+YUYV_VECTOR_PASS 37 pixels=30 frames=38 errors=0
+
+YUYV_VECTOR_PASS 38 pixels=30 frames=39 errors=0
+
+YUYV_VECTOR_PASS 39 pixels=30 frames=40 errors=0
+
+YUYV_VECTOR_PASS 40 pixels=30 frames=41 errors=0
+
+YUYV_VECTOR_PASS 41 pixels=30 frames=42 errors=0
+
+YUYV_VECTOR_PASS 42 pixels=30 frames=43 errors=0
+
+YUYV_VECTOR_PASS 43 pixels=30 frames=44 errors=0
+
+YUYV_VECTOR_PASS 44 pixels=30 frames=45 errors=0
+
+YUYV_VECTOR_PASS 45 pixels=30 frames=46 errors=0
+
+YUYV_VECTOR_PASS 46 pixels=30 frames=47 errors=0
+
+YUYV_VECTOR_PASS 47 pixels=30 frames=48 errors=0
+
+YUYV_VECTOR_PASS 48 pixels=30 frames=49 errors=0
+
+YUYV_VECTOR_PASS 49 pixels=30 frames=50 errors=0
+
+YUYV_VECTOR_PASS 50 pixels=30 frames=51 errors=0
+
+YUYV_VECTOR_PASS 51 pixels=30 frames=52 errors=0
+
+YUYV_VECTOR_PASS 52 pixels=30 frames=53 errors=0
+
+YUYV_VECTOR_PASS 53 pixels=30 frames=54 errors=0
+
+YUYV_VECTOR_PASS 54 pixels=30 frames=55 errors=0
+
+YUYV_VECTOR_PASS 55 pixels=30 frames=56 errors=0
+
+YUYV_VECTOR_PASS 56 pixels=30 frames=57 errors=0
+
+YUYV_VECTOR_PASS 57 pixels=30 frames=58 errors=0
+
+YUYV_VECTOR_PASS 58 pixels=30 frames=59 errors=0
+
+YUYV_VECTOR_PASS 59 pixels=30 frames=60 errors=0
+
+YUYV_VECTOR_PASS 60 pixels=126 frames=61 errors=0
+
+YUYV_VECTOR_PASS 61 pixels=126 frames=62 errors=0
+
+YUYV_VECTOR_PASS 62 pixels=126 frames=63 errors=0
+
+YUYV_VECTOR_PASS 63 pixels=126 frames=64 errors=0
+
+YUYV_VECTOR_PASS 64 pixels=126 frames=65 errors=0
+
+YUYV_VECTOR_PASS 65 pixels=126 frames=66 errors=0
+
+YUYV_VECTOR_PASS 66 pixels=126 frames=67 errors=0
+
+YUYV_VECTOR_PASS 67 pixels=126 frames=68 errors=0
+
+YUYV_VECTOR_PASS 68 pixels=126 frames=69 errors=0
+
+YUYV_VECTOR_PASS 69 pixels=126 frames=70 errors=0
+
+YUYV_VECTOR_PASS 70 pixels=126 frames=71 errors=0
+
+YUYV_VECTOR_PASS 71 pixels=126 frames=72 errors=0
+
+YUYV_VECTOR_PASS 72 pixels=3840 frames=73 errors=0
+
+YUYV_VECTOR_PASS 73 pixels=2880 frames=74 errors=0
+
+YUYV_VECTOR_PASS 74 pixels=3840 frames=75 errors=0
+
+YUYV_VECTOR_PASS 75 pixels=2880 frames=76 errors=0
+
+YUYV_VECTOR_PASS 76 pixels=3840 frames=77 errors=0
+
+YUYV_VECTOR_PASS 77 pixels=2880 frames=78 errors=0
+
+YUYV_VECTOR_PASS 78 pixels=3840 frames=79 errors=0
+
+YUYV_VECTOR_PASS 79 pixels=2880 frames=80 errors=0
+
+YUYV_VECTOR_PASS 80 pixels=3840 frames=81 errors=0
+
+YUYV_VECTOR_PASS 81 pixels=2880 frames=82 errors=0
+
+YUYV_VECTOR_PASS 82 pixels=3840 frames=83 errors=0
+
+YUYV_VECTOR_PASS 83 pixels=2880 frames=84 errors=0
+
+YUYV_VECTOR_PASS 84 pixels=12 frames=85 errors=1
+
+YUYV_VECTOR_PASS 85 pixels=12 frames=86 errors=2
+
+YUYV_VECTOR_PASS 86 pixels=12 frames=87 errors=3
+
+YUYV_VECTOR_PASS 87 pixels=300 frames=88 errors=3
+
+YUYV_VECTOR_PASS 88 pixels=300 frames=89 errors=3
+
+YUYV_VECTOR_PASS 89 pixels=300 frames=90 errors=3
+
+YUYV_VECTOR_PASS 90 pixels=300 frames=91 errors=3
+
+YUYV_VECTOR_PASS 91 pixels=300 frames=92 errors=3
+
+YUYV_VECTOR_PASS 92 pixels=300 frames=93 errors=3
+
+YUYV_VECTOR_PASS 93 pixels=300 frames=94 errors=3
+
+YUYV_VECTOR_PASS 94 pixels=300 frames=95 errors=3
+
+YUYV_VECTOR_PASS 95 pixels=300 frames=96 errors=3
+
+YUYV_VECTOR_PASS 96 pixels=300 frames=97 errors=3
+
+YUYV_VECTOR_PASS 97 pixels=300 frames=98 errors=3
+
+YUYV_VECTOR_PASS 98 pixels=300 frames=99 errors=3
+
+YUYV_VECTOR_PASS 99 pixels=300 frames=100 errors=3
+
+YUYV_VECTOR_PASS 100 pixels=300 frames=101 errors=3
+
+YUYV_VECTOR_PASS 101 pixels=300 frames=102 errors=3
+
+YUYV_VECTOR_PASS 102 pixels=300 frames=103 errors=3
+
+YUYV_VECTOR_PASS 103 pixels=300 frames=104 errors=3
+
+YUYV_VECTOR_PASS 104 pixels=300 frames=105 errors=3
+
+YUYV_VECTOR_PASS 105 pixels=300 frames=106 errors=3
+
+YUYV_VECTOR_PASS 106 pixels=300 frames=107 errors=3
+
+YUYV_VECTOR_PASS 107 pixels=300 frames=108 errors=3
+
+YUYV_VECTOR_PASS 108 pixels=300 frames=109 errors=3
+
+YUYV_VECTOR_PASS 109 pixels=300 frames=110 errors=3
+
+YUYV_VECTOR_PASS 110 pixels=300 frames=111 errors=3
+
+YUYV_VECTOR_PASS 111 pixels=300 frames=112 errors=3
+
+YUYV_VECTOR_PASS 112 pixels=300 frames=113 errors=3
+
+YUYV_VECTOR_PASS 113 pixels=300 frames=114 errors=3
+
+YUYV_VECTOR_PASS 114 pixels=300 frames=115 errors=3
+
+YUYV_VECTOR_PASS 115 pixels=300 frames=116 errors=3
+
+YUYV_VECTOR_PASS 116 pixels=300 frames=117 errors=3
+
+YUYV_VECTOR_PASS 117 pixels=300 frames=118 errors=3
+
+YUYV_VECTOR_PASS 118 pixels=300 frames=119 errors=3
+
+YUYV_VECTOR_PASS 119 pixels=300 frames=120 errors=3
+
+YUYV_VECTOR_PASS 120 pixels=300 frames=121 errors=3
+
+YUYV_VECTOR_PASS 121 pixels=300 frames=122 errors=3
+
+YUYV_VECTOR_PASS 122 pixels=300 frames=123 errors=3
+
+YUYV_VECTOR_PASS 123 pixels=300 frames=124 errors=3
+
+YUYV_VECTOR_PASS 124 pixels=300 frames=125 errors=3
+
+YUYV_VECTOR_PASS 125 pixels=300 frames=126 errors=3
+
+YUYV_VECTOR_PASS 126 pixels=300 frames=127 errors=3
+
+YUYV_VECTOR_PASS 127 pixels=300 frames=128 errors=3
+
+YUYV_VECTOR_PASS 128 pixels=300 frames=129 errors=3
+
+YUYV_VECTOR_PASS 129 pixels=300 frames=130 errors=3
+
+YUYV_VECTOR_PASS 130 pixels=300 frames=131 errors=3
+
+YUYV_VECTOR_PASS 131 pixels=300 frames=132 errors=3
+
+YUYV_VECTOR_PASS 132 pixels=300 frames=133 errors=3
+
+YUYV_VECTOR_PASS 133 pixels=300 frames=134 errors=3
+
+YUYV_VECTOR_PASS 134 pixels=300 frames=135 errors=3
+
+YUYV_VECTOR_PASS 135 pixels=300 frames=136 errors=3
+
+YUYV_VECTOR_PASS 136 pixels=126 frames=137 errors=3
+
+YUYV_VECTOR_PASS 137 pixels=126 frames=138 errors=3
+
+YUYV_VECTOR_PASS 138 pixels=126 frames=139 errors=3
+
+YUYV_VECTOR_PASS 139 pixels=126 frames=140 errors=3
+
+YUYV_VECTOR_PASS 140 pixels=126 frames=141 errors=3
+
+YUYV_VECTOR_PASS 141 pixels=126 frames=142 errors=3
+
+YUYV_VECTOR_PASS 142 pixels=126 frames=143 errors=3
+
+YUYV_VECTOR_PASS 143 pixels=126 frames=144 errors=3
+
+YUYV_VECTOR_PASS 144 pixels=126 frames=145 errors=3
+
+YUYV_VECTOR_PASS 145 pixels=126 frames=146 errors=3
+
+YUYV_VECTOR_PASS 146 pixels=126 frames=147 errors=3
+
+YUYV_VECTOR_PASS 147 pixels=126 frames=148 errors=3
+
+YUYV_VECTOR_PASS 148 pixels=5760 frames=149 errors=3
+
+YUYV_VECTOR_PASS 149 pixels=4320 frames=150 errors=3
+
+YUYV_VECTOR_PASS 150 pixels=5760 frames=151 errors=3
+
+YUYV_VECTOR_PASS 151 pixels=4320 frames=152 errors=3
+
+YUYV_VECTOR_PASS 152 pixels=5760 frames=153 errors=3
+
+YUYV_VECTOR_PASS 153 pixels=4320 frames=154 errors=3
+
+YUYV_VECTOR_PASS 154 pixels=5760 frames=155 errors=3
+
+YUYV_VECTOR_PASS 155 pixels=4320 frames=156 errors=3
+
+YUYV_VECTOR_PASS 156 pixels=5760 frames=157 errors=3
+
+YUYV_VECTOR_PASS 157 pixels=4320 frames=158 errors=3
+
+YUYV_VECTOR_PASS 158 pixels=5760 frames=159 errors=3
+
+YUYV_VECTOR_PASS 159 pixels=4320 frames=160 errors=3
+
+YUYV_VECTOR_PASS 160 pixels=264 frames=161 errors=3
+
+YUYV_VECTOR_PASS 161 pixels=264 frames=162 errors=3
+
+YUYV_VECTOR_PASS 162 pixels=264 frames=163 errors=3
+
+YUYV_VECTOR_PASS 163 pixels=264 frames=164 errors=3
+
+YUYV_VECTOR_PASS 164 pixels=264 frames=165 errors=3
+
+YUYV_VECTOR_PASS 165 pixels=264 frames=166 errors=3
+
+YUYV_VECTOR_PASS 166 pixels=264 frames=167 errors=3
+
+YUYV_VECTOR_PASS 167 pixels=264 frames=168 errors=3
+
+YUYV_VECTOR_PASS 168 pixels=264 frames=169 errors=3
+
+YUYV_VECTOR_PASS 169 pixels=264 frames=170 errors=3
+
+YUYV_VECTOR_PASS 170 pixels=264 frames=171 errors=3
+
+YUYV_VECTOR_PASS 171 pixels=264 frames=172 errors=3
+
+YUYV_VECTOR_PASS 172 pixels=264 frames=173 errors=3
+
+YUYV_VECTOR_PASS 173 pixels=264 frames=174 errors=3
+
+YUYV_VECTOR_PASS 174 pixels=264 frames=175 errors=3
+
+YUYV_VECTOR_PASS 175 pixels=264 frames=176 errors=3
+
+YUYV_VECTOR_PASS 176 pixels=264 frames=177 errors=3
+
+YUYV_VECTOR_PASS 177 pixels=264 frames=178 errors=3
+
+YUYV_VECTOR_PASS 178 pixels=264 frames=179 errors=3
+
+YUYV_VECTOR_PASS 179 pixels=264 frames=180 errors=3
+
+YUYV_VECTOR_PASS 180 pixels=264 frames=181 errors=3
+
+YUYV_VECTOR_PASS 181 pixels=264 frames=182 errors=3
+
+YUYV_VECTOR_PASS 182 pixels=264 frames=183 errors=3
+
+YUYV_VECTOR_PASS 183 pixels=264 frames=184 errors=3
+
+YUYV_VECTOR_PASS 184 pixels=264 frames=185 errors=3
+
+YUYV_VECTOR_PASS 185 pixels=264 frames=186 errors=3
+
+YUYV_VECTOR_PASS 186 pixels=264 frames=187 errors=3
+
+YUYV_VECTOR_PASS 187 pixels=264 frames=188 errors=3
+
+YUYV_VECTOR_PASS 188 pixels=264 frames=189 errors=3
+
+YUYV_VECTOR_PASS 189 pixels=264 frames=190 errors=3
+
+YUYV_VECTOR_PASS 190 pixels=264 frames=191 errors=3
+
+YUYV_VECTOR_PASS 191 pixels=264 frames=192 errors=3
+
+YUYV_VECTOR_PASS 192 pixels=264 frames=193 errors=3
+
+YUYV_VECTOR_PASS 193 pixels=264 frames=194 errors=3
+
+YUYV_VECTOR_PASS 194 pixels=264 frames=195 errors=3
+
+YUYV_VECTOR_PASS 195 pixels=264 frames=196 errors=3
+
+YUYV_VECTOR_PASS 196 pixels=126 frames=197 errors=3
+
+YUYV_VECTOR_PASS 197 pixels=126 frames=198 errors=3
+
+YUYV_VECTOR_PASS 198 pixels=126 frames=199 errors=3
+
+YUYV_VECTOR_PASS 199 pixels=126 frames=200 errors=3
+
+YUYV_VECTOR_PASS 200 pixels=126 frames=201 errors=3
+
+YUYV_VECTOR_PASS 201 pixels=126 frames=202 errors=3
+
+YUYV_VECTOR_PASS 202 pixels=126 frames=203 errors=3
+
+YUYV_VECTOR_PASS 203 pixels=126 frames=204 errors=3
+
+YUYV_VECTOR_PASS 204 pixels=5760 frames=205 errors=3
+
+YUYV_VECTOR_PASS 205 pixels=336 frames=206 errors=3
+
+YUYV_VECTOR_PASS 206 pixels=336 frames=207 errors=3
+
+YUYV_VECTOR_PASS 207 pixels=336 frames=208 errors=3
+
+YUYV_VECTOR_PASS 208 pixels=336 frames=209 errors=3
+
+YUYV_VECTOR_PASS 209 pixels=336 frames=210 errors=3
+
+YUYV_VECTOR_PASS 210 pixels=336 frames=211 errors=3
+
+YUYV_VECTOR_PASS 211 pixels=336 frames=212 errors=3
+
+YUYV_VECTOR_PASS 212 pixels=336 frames=213 errors=3
+
+YUYV_VECTOR_PASS 213 pixels=336 frames=214 errors=3
+
+YUYV_VECTOR_PASS 214 pixels=336 frames=215 errors=3
+
+YUYV_VECTOR_PASS 215 pixels=336 frames=216 errors=3
+
+YUYV_VECTOR_PASS 216 pixels=336 frames=217 errors=3
+
+YUYV_VECTOR_PASS 217 pixels=336 frames=218 errors=3
+
+YUYV_VECTOR_PASS 218 pixels=336 frames=219 errors=3
+
+YUYV_VECTOR_PASS 219 pixels=336 frames=220 errors=3
+
+YUYV_VECTOR_PASS 220 pixels=336 frames=221 errors=3
+
+YUYV_VECTOR_PASS 221 pixels=336 frames=222 errors=3
+
+YUYV_VECTOR_PASS 222 pixels=336 frames=223 errors=3
+
+YUYV_VECTOR_PASS 223 pixels=336 frames=224 errors=3
+
+YUYV_VECTOR_PASS 224 pixels=336 frames=225 errors=3
+
+YUYV_VECTOR_PASS 225 pixels=336 frames=226 errors=3
+
+YUYV_VECTOR_PASS 226 pixels=336 frames=227 errors=3
+
+YUYV_VECTOR_PASS 227 pixels=336 frames=228 errors=3
+
+YUYV_VECTOR_PASS 228 pixels=18 frames=229 errors=3
+
+YUYV_VECTOR_PASS 229 pixels=32 frames=230 errors=3
+
+YUYV_VECTOR_PASS 230 pixels=30 frames=231 errors=3
+
+YUYV_VECTOR_PASS 231 pixels=60 frames=232 errors=3
+
+YUYV_VECTOR_PASS 232 pixels=336 frames=233 errors=3
+
+YUYV_VECTOR_PASS 233 pixels=126 frames=234 errors=3
+
+YUYV_VECTOR_PASS 234 pixels=126 frames=235 errors=3
+
+YUYV_VECTOR_PASS 235 pixels=126 frames=236 errors=3
+
+YUYV_VECTOR_PASS 236 pixels=126 frames=237 errors=3
+
+YUYV_VECTOR_PASS 237 pixels=126 frames=238 errors=3
+
+YUYV_VECTOR_PASS 238 pixels=126 frames=239 errors=3
+
+YUYV_VECTOR_PASS 239 pixels=126 frames=240 errors=3
+
+YUYV_VECTOR_PASS 240 pixels=126 frames=241 errors=3
+
+YUYV_VECTOR_PASS 241 pixels=11520 frames=242 errors=3
+
+YUYV_VECTOR_PASS 242 pixels=336 frames=243 errors=3
+
+YUYV_VECTOR_PASS 243 pixels=336 frames=244 errors=3
+
+YUYV_VECTOR_PASS 244 pixels=336 frames=245 errors=3
+
+YUYV_VECTOR_PASS 245 pixels=336 frames=246 errors=3
+
+YUYV_VECTOR_PASS 246 pixels=336 frames=247 errors=3
+
+YUYV_VECTOR_PASS 247 pixels=336 frames=248 errors=3
+
+YUYV_VECTOR_PASS 248 pixels=336 frames=249 errors=3
+
+YUYV_VECTOR_PASS 249 pixels=336 frames=250 errors=3
+
+YUYV_VECTOR_PASS 250 pixels=336 frames=251 errors=3
+
+YUYV_VECTOR_PASS 251 pixels=336 frames=252 errors=3
+
+YUYV_VECTOR_PASS 252 pixels=336 frames=253 errors=3
+
+YUYV_VECTOR_PASS 253 pixels=336 frames=254 errors=3
+
+YUYV_VECTOR_PASS 254 pixels=336 frames=255 errors=3
+
+YUYV_VECTOR_PASS 255 pixels=336 frames=256 errors=3
+
+YUYV_VECTOR_PASS 256 pixels=336 frames=257 errors=3
+
+YUYV_VECTOR_PASS 257 pixels=336 frames=258 errors=3
+
+YUYV_VECTOR_PASS 258 pixels=336 frames=259 errors=3
+
+YUYV_VECTOR_PASS 259 pixels=336 frames=260 errors=3
+
+YUYV_VECTOR_PASS 260 pixels=336 frames=261 errors=3
+
+YUYV_VECTOR_PASS 261 pixels=336 frames=262 errors=3
+
+YUYV_VECTOR_PASS 262 pixels=336 frames=263 errors=3
+
+YUYV_VECTOR_PASS 263 pixels=336 frames=264 errors=3
+
+YUYV_VECTOR_PASS 264 pixels=336 frames=265 errors=3
+
+YUYV_VECTOR_PASS 265 pixels=336 frames=266 errors=3
+
+YUYV_VECTOR_PASS 266 pixels=336 frames=267 errors=3
+
+YUYV_VECTOR_PASS 267 pixels=336 frames=268 errors=3
+
+YUYV_VECTOR_PASS 268 pixels=9600 frames=269 errors=3
+
+YUYV_FULL_PASS 1920x1080 mode=0 pixels=2073600
+
+YUYV_FULL_PASS 1280x720 mode=0 pixels=921600
+
+YUYV_FULL_PASS 1920x1080 mode=3 pixels=2073600
+
+YUYV_FULL_PASS 1280x720 mode=3 pixels=921600
+
+YUYV_ALL_REFERENCE_VECTORS_PASS 269 + 4 full 1080p/720p + 8 invalid
+
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 2073600
+
+INFO: [SIM 211-1] CSim done with 0 errors.
+
+INFO: [SIM 211-3] *************** CSIM finish ***************
+
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:26; Allocated memory: 1.543 MB.
+
+INFO: [HLS 200-1510] Running: csynth_design 
+
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.825 seconds; current allocated memory: 164.883 MB.
+
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+
+INFO: [HLS 200-10] Analyzing design file '../hls/spatial_v4.cpp' ... 
+
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.087 seconds; current allocated memory: 168.387 MB.
+
+INFO: [HLS 200-1995] There were 8,706 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (R:/build/yuyv422_v4_split_hls/solution1/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 214-131] Inlining function 'clamp(int, int, int)' into 'clip8(int)' (../hls/spatial_v4.cpp:21:12)
+
+INFO: [HLS 214-131] Inlining function 'get_y(ap_uint<32>, int)' into 'vertical5(ap_uint<32> const*, int)' (../hls/spatial_v4.cpp:109:12)
+
+INFO: [HLS 214-131] Inlining function 'get_y(ap_uint<32>, int)' into 'pair_y(ap_uint<32>)' (../hls/spatial_v4.cpp:37:13)
+
+INFO: [HLS 214-131] Inlining function 'absolute(int)' into 'round64(int)' (../hls/spatial_v4.cpp:45:12)
+
+INFO: [HLS 214-131] Inlining function 'get_u(ap_uint<32>)' into 'process_uv(ap_uint<32> const (*) [3], int, int, int, int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int)' (../hls/spatial_v4.cpp:187:12)
+
+INFO: [HLS 214-131] Inlining function 'clip8(int)' into 'process_uv(ap_uint<32> const (*) [3], int, int, int, int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int)' (../hls/spatial_v4.cpp:241:69)
+
+INFO: [HLS 214-131] Inlining function 'round64(int)' into 'process_uv(ap_uint<32> const (*) [3], int, int, int, int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int)' (../hls/spatial_v4.cpp:241:78)
+
+INFO: [HLS 214-131] Inlining function 'absolute(int)' into 'process_uv(ap_uint<32> const (*) [3], int, int, int, int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int)' (../hls/spatial_v4.cpp:235:20)
+
+INFO: [HLS 214-131] Inlining function 'range_weight(int, int)' into 'process_uv(ap_uint<32> const (*) [3], int, int, int, int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int)' (../hls/spatial_v4.cpp:234:36)
+
+INFO: [HLS 214-131] Inlining function 'maximum(int, int)' into 'process_uv(ap_uint<32> const (*) [3], int, int, int, int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int)' (../hls/spatial_v4.cpp:234:49)
+
+INFO: [HLS 214-131] Inlining function 'clamp(int, int, int)' into 'process_uv(ap_uint<32> const (*) [3], int, int, int, int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int)' (../hls/spatial_v4.cpp:206:15)
+
+INFO: [HLS 214-131] Inlining function 'pair_y(ap_uint<32>)' into 'process_uv(ap_uint<32> const (*) [3], int, int, int, int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int)' (../hls/spatial_v4.cpp:203:75)
+
+INFO: [HLS 214-131] Inlining function 'get_v(ap_uint<32>)' into 'process_uv(ap_uint<32> const (*) [3], int, int, int, int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int)' (../hls/spatial_v4.cpp:203:49)
+
+INFO: [HLS 214-131] Inlining function 'get_u(ap_uint<32>)' into 'colour_ceiling(ap_uint<32>)' (../hls/spatial_v4.cpp:97:12)
+
+INFO: [HLS 214-131] Inlining function 'maximum(int, int)' into 'colour_ceiling(ap_uint<32>)' (../hls/spatial_v4.cpp:104:16)
+
+INFO: [HLS 214-131] Inlining function 'get_v(ap_uint<32>)' into 'colour_ceiling(ap_uint<32>)' (../hls/spatial_v4.cpp:97:31)
+
+INFO: [HLS 214-131] Inlining function 'absolute(int)' into 'impulse_center(int const (*) [3], int)' (../hls/spatial_v4.cpp:57:20)
+
+INFO: [HLS 214-131] Inlining function 'maximum(int, int)' into 'impulse_center(int const (*) [3], int)' (../hls/spatial_v4.cpp:62:74)
+
+INFO: [HLS 214-131] Inlining function 'absolute(int)' into 'range_base(int const (*) [3], int, int)' (../hls/spatial_v4.cpp:75:45)
+
+INFO: [HLS 214-131] Inlining function 'round64(int)' into 'range_base(int const (*) [3], int, int)' (../hls/spatial_v4.cpp:79:19)
+
+INFO: [HLS 214-131] Inlining function 'range_weight(int, int)' into 'range_base(int const (*) [3], int, int)' (../hls/spatial_v4.cpp:75:32)
+
+INFO: [HLS 214-131] Inlining function 'get_y(ap_uint<32>, int)' into 'process_y(ap_uint<32> const (*) [3], int const*, int, int, int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int, ap_uint<8> const*, ap_uint<9> const*, ap_uint<8> const*, ap_uint<8> const*, int)' (../hls/spatial_v4.cpp:119:18)
+
+INFO: [HLS 214-131] Inlining function 'clip8(int)' into 'process_y(ap_uint<32> const (*) [3], int const*, int, int, int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int, ap_uint<8> const*, ap_uint<9> const*, ap_uint<8> const*, ap_uint<8> const*, int)' (../hls/spatial_v4.cpp:180:12)
+
+INFO: [HLS 214-131] Inlining function 'maximum(int, int)' into 'process_y(ap_uint<32> const (*) [3], int const*, int, int, int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int, ap_uint<8> const*, ap_uint<9> const*, ap_uint<8> const*, ap_uint<8> const*, int)' (../hls/spatial_v4.cpp:179:13)
+
+INFO: [HLS 214-131] Inlining function 'clamp(int, int, int)' into 'process_y(ap_uint<32> const (*) [3], int const*, int, int, int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int, ap_uint<8> const*, ap_uint<9> const*, ap_uint<8> const*, ap_uint<8> const*, int)' (../hls/spatial_v4.cpp:177:12)
+
+INFO: [HLS 214-131] Inlining function 'absolute(int)' into 'process_y(ap_uint<32> const (*) [3], int const*, int, int, int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int, ap_uint<8> const*, ap_uint<9> const*, ap_uint<8> const*, ap_uint<8> const*, int)' (../hls/spatial_v4.cpp:156:48)
+
+INFO: [HLS 214-131] Inlining function 'binomial5(int const*, bool)' into 'process_y(ap_uint<32> const (*) [3], int const*, int, int, int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int, ap_uint<8> const*, ap_uint<9> const*, ap_uint<8> const*, ap_uint<8> const*, int)' (../hls/spatial_v4.cpp:156:20)
+
+INFO: [HLS 214-131] Inlining function 'range_base(int const (*) [3], int, int)' into 'process_y(ap_uint<32> const (*) [3], int const*, int, int, int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int, ap_uint<8> const*, ap_uint<9> const*, ap_uint<8> const*, ap_uint<8> const*, int)' (../hls/spatial_v4.cpp:146:24)
+
+INFO: [HLS 214-131] Inlining function 'impulse_center(int const (*) [3], int)' into 'process_y(ap_uint<32> const (*) [3], int const*, int, int, int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int, ap_uint<8> const*, ap_uint<9> const*, ap_uint<8> const*, ap_uint<8> const*, int)' (../hls/spatial_v4.cpp:145:24)
+
+INFO: [HLS 214-131] Inlining function 'process_y(ap_uint<32> const (*) [3], int const*, int, int, int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int, ap_uint<8> const*, ap_uint<9> const*, ap_uint<8> const*, ap_uint<8> const*, int)' into 'video_enhance_yuyv422_v4_split_core(hls::stream<hls::axis<ap_uint<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, unsigned int, unsigned int, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, unsigned int*)' (../hls/spatial_v4.cpp:364:38)
+
+INFO: [HLS 214-131] Inlining function 'colour_ceiling(ap_uint<32>)' into 'video_enhance_yuyv422_v4_split_core(hls::stream<hls::axis<ap_uint<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, unsigned int, unsigned int, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, unsigned int*)' (../hls/spatial_v4.cpp:361:29)
+
+INFO: [HLS 214-131] Inlining function 'process_uv(ap_uint<32> const (*) [3], int, int, int, int, unsigned int, unsigned int, unsigned int, bool, int, int, int, int)' into 'video_enhance_yuyv422_v4_split_core(hls::stream<hls::axis<ap_uint<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, unsigned int, unsigned int, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, unsigned int*)' (../hls/spatial_v4.cpp:359:32)
+
+INFO: [HLS 214-131] Inlining function 'vertical5(ap_uint<32> const*, int)' into 'video_enhance_yuyv422_v4_split_core(hls::stream<hls::axis<ap_uint<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, unsigned int, unsigned int, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, unsigned int*)' (../hls/spatial_v4.cpp:351:45)
+
+INFO: [HLS 214-131] Inlining function 'clip8(int)' into 'video_enhance_yuyv422_v4_split_core(hls::stream<hls::axis<ap_uint<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, unsigned int, unsigned int, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, unsigned int*)' (../hls/spatial_v4.cpp:304:70)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_341_2' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:341:35)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_346_3' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:346:31)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_352_4' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:352:31)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_196_1' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:196:23)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_198_2' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:198:27)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_208_3' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:208:23)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_210_4' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:210:27)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_227_5' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:227:23)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_229_6' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:229:27)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_124_1' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:124:23)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_126_2' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:126:27)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_50_1' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:50:22)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_52_2' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:52:26)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_68_1' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:68:22)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_70_2' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:70:26)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_169_3' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:169:23)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_171_4' is marked as complete unroll implied by the pipeline pragma (../hls/spatial_v4.cpp:171:27)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_341_2' (../hls/spatial_v4.cpp:341:35) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 5 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_346_3' (../hls/spatial_v4.cpp:346:31) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 5 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_352_4' (../hls/spatial_v4.cpp:352:31) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 4 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_196_1' (../hls/spatial_v4.cpp:196:23) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 3 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_198_2' (../hls/spatial_v4.cpp:198:27) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 3 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_208_3' (../hls/spatial_v4.cpp:208:23) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 3 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_210_4' (../hls/spatial_v4.cpp:210:27) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 3 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_227_5' (../hls/spatial_v4.cpp:227:23) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 3 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_229_6' (../hls/spatial_v4.cpp:229:27) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 3 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_124_1' (../hls/spatial_v4.cpp:124:23) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 3 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_126_2' (../hls/spatial_v4.cpp:126:27) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 3 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_50_1' (../hls/spatial_v4.cpp:50:22) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 3 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_52_2' (../hls/spatial_v4.cpp:52:26) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 3 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_68_1' (../hls/spatial_v4.cpp:68:22) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 3 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_70_2' (../hls/spatial_v4.cpp:70:26) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 3 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_169_3' (../hls/spatial_v4.cpp:169:23) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 3 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_171_4' (../hls/spatial_v4.cpp:171:27) in function 'video_enhance_yuyv422_v4_split_core' completely with a factor of 3 (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 200-1995] There were 6,579 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details (R:/build/yuyv422_v4_split_hls/solution1/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 2,844 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (R:/build/yuyv422_v4_split_hls/solution1/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 214-178] Inlining function 'hls::axis<ap_uint<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>::axis()' into 'video_enhance_yuyv422_v4_split_core(hls::stream<hls::axis<ap_uint<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, unsigned int, unsigned int, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, unsigned int*)' (../hls/spatial_v4.cpp:252:0)
+
+INFO: [HLS 200-1995] There were 2,737 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (R:/build/yuyv422_v4_split_hls/solution1/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 2,654 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (R:/build/yuyv422_v4_split_hls/solution1/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 214-248] Applying array_partition to 'win': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (../hls/spatial_v4.cpp:317:12)
+
+INFO: [HLS 214-248] Applying array_partition to 'rows': Complete partitioning on dimension 1. (../hls/spatial_v4.cpp:329:20)
+
+INFO: [HLS 200-1995] There were 4,026 instructions in the design after the 'Array/Struct' phase of compilation. See the Design Size Report for more details (R:/build/yuyv422_v4_split_hls/solution1/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 2,472 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (R:/build/yuyv422_v4_split_hls/solution1/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 2,472 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (R:/build/yuyv422_v4_split_hls/solution1/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 2,472 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (R:/build/yuyv422_v4_split_hls/solution1/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 2,701 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (R:/build/yuyv422_v4_split_hls/solution1/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 2,679 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details (R:/build/yuyv422_v4_split_hls/solution1/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 214-376] Pipelining loop< LUT> at ../hls/spatial_v4.cpp:301:9 due to pipeline_loops threshold
+
+INFO: [HLS 200-1995] There were 2,575 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (R:/build/yuyv422_v4_split_hls/solution1/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 2,454 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (R:/build/yuyv422_v4_split_hls/solution1/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 2,452 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (R:/build/yuyv422_v4_split_hls/solution1/syn/report/csynth_design_size.rpt:2)
+
+ERROR: [HLS 200-1715] Encountered problem during source synthesis
+
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:21; Allocated memory: 8.516 MB.
+
+Pre-synthesis failed.
+
+    while executing
+
+"source R:/build_hls.tcl"
+
+    ("uplevel" body line 1)
+
+    invoked from within
+
+"uplevel \#0 [list source $tclfile] "
+
+
+
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 3 seconds. Total elapsed time: 52.911 seconds; peak allocated memory: 173.410 MB.
+
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

@@ -1,0 +1,23 @@
+{
+  "file": "tans_corpus_1080p.bin",
+  "width": 1920,
+  "height": 1080,
+  "frames": 2,
+  "sha256": "dd1538588b499ddfc6bb628fdb01a26cff6b3f73284574a9a9346952ae8ce99e",
+  "sources": [
+    {
+      "kind": "fpga_output_reference",
+      "clip": "people",
+      "frame": 72,
+      "params": "evidence/ip13_board_20261027/audit_ip13_board_params*.json",
+      "dump": "evidence/arith_codec_20261027/dump_frames.py"
+    },
+    {
+      "kind": "fpga_output_reference",
+      "clip": "tokyo",
+      "frame": 72,
+      "params": "evidence/ip13_board_20261027/audit_ip13_board_params*.json",
+      "dump": "evidence/arith_codec_20261027/dump_frames.py"
+    }
+  ]
+}

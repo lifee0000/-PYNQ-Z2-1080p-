@@ -1,0 +1,31 @@
+{
+  "file": "rice_corpus_1080p.bin",
+  "width": 1920,
+  "height": 1080,
+  "frames": 5,
+  "sha256": "32782d3fe83e87bed94227d70d13a0886803e64fa2065195a586f31cec51c203",
+  "sources": [
+    {
+      "path": "media/people_720p50_input.mp4",
+      "frame": 100,
+      "fit": "LIBSWSCALE_LANCZOS_RGB_LETTERBOX"
+    },
+    {
+      "path": "media/camera_input.mp4",
+      "frame": 50,
+      "fit": "LIBSWSCALE_LANCZOS_RGB_LETTERBOX"
+    },
+    {
+      "path": "media/people_original_60.webm",
+      "frame": 300,
+      "fit": "LIBSWSCALE_LANCZOS_RGB_LETTERBOX"
+    },
+    {
+      "kind": "uniform_noise",
+      "seed": 20261024
+    },
+    {
+      "kind": "synthetic_edges_ramps"
+    }
+  ]
+}

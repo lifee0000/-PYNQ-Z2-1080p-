@@ -1,0 +1,26 @@
+{
+  "machine": "armv7l",
+  "source_sha256": {
+    "native/build_native.py": "a639959e6044a10757cb22e5d6a75aaffe79afe7e4341a91beedfdc427a17b10",
+    "native/codec_exports.cpp": "00a823a572879fc51c3272ed15151ace128c0339e661f9b33bab327dfc100617",
+    "native/near_reference.h": "c78bc5b378e18b6a90277f835a718f10dc5db2eb41853acefb32d389d22b7e2d",
+    "native/rice02_fast.h": "510ce48acef4f10071712a8ba9c607404b616b81bcf30d2a3d21224cd44c9cce",
+    "native/rice03_decode_fast.h": "d5ecde61d6383f127c0455167d81af4adc469f27c5d14ecf85184db1c0744841",
+    "native/rice03_near_fast.h": "a26bb4518f89a247625d7e0e89873b828d8854c840004a0de2ab77fcbbd8f96c",
+    "native/rice_exports.cpp": "cd4c1957ffe626e5897680b12aa873a09b68d8baf1ac055460c8ee4287234e39",
+    "native/rice_reference/rice03_codec.cpp": "1db3e710ebf145279d91ce1ddb3cf7ba35e14f17b45877e342907c77e9cd703e",
+    "native/rice_reference/rice_codec.cpp": "671aa31b27b8f2b52c8e69e2fb8c4dfb76a01c69271770c300ecdef958c3ab43",
+    "native/tans02_fast.h": "2c767d57f31b4a9d2b12dc7e1594774ba3db3de3b73d2ea02fa63d049b98bde6",
+    "native/tans_reference.h": "f16146c71a5fd86dbf78382c12edad8dbd5127fb29e5cb7fb6b8198f47522985",
+    "native/tans_tables.h": "e60e8204d4ffedb7ddf25b37d11336df34d644f18ade4f1ce296114e72846a7e",
+    "native/vendor/lz4/lz4.c": "9396f7de527bc8435de9c7569fb7998e56545a84b4f3c2d808c0235c01774539",
+    "native/vendor/lz4/lz4.h": "26b82efc53d1570f3b54eef02e9c4764c1ad374ff03cac04e2ced5ea4d4c552f",
+    "native/vendor/lz4/xxhash.c": "b667033dc735fb5ea5648e0a61a2e065e5ef5bbda53669730063bd856c643c48",
+    "native/vendor/lz4/xxhash.h": "aefdd236f35130495c18764cabed3f7b216906855fc5e6a9025cd2040bc84444",
+    "native/wire_hash.h": "027fd530c93759bc1734ef640d7f0dc4888e1bf0c939b9bad0db888f34e405bd",
+    "native/y50_native.cpp": "27eb2b45efe8f890be655c8ca31909ab5b8686a9c1faafe31118a3233af64f7e",
+    "native/y50_native.h": "600869ed3bad25c119cd5cc1c61678d23c34c218f2a5bcad4b47bfd0afc1a1e8"
+  },
+  "sources_unchanged_during_build": true,
+  "native_sha256": "2088d07a077f9ad3e1e34b217af0c772dcda0576d61359d10b1b83b1eaaabe6b"
+}

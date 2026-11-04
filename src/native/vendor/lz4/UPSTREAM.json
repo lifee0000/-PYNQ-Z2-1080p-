@@ -1,0 +1,38 @@
+{
+  "project": "LZ4",
+  "version": "v1.10.0",
+  "source": "https://github.com/lz4/lz4/tree/v1.10.0/lib",
+  "fetched_utc": "2026-10-23T16:01:38.078482+00:00",
+  "unmodified_files": [
+    {
+      "file": "lz4.c",
+      "upstream_url": "https://raw.githubusercontent.com/lz4/lz4/v1.10.0/lib/lz4.c",
+      "bytes": 118145,
+      "sha256": "9396f7de527bc8435de9c7569fb7998e56545a84b4f3c2d808c0235c01774539"
+    },
+    {
+      "file": "lz4.h",
+      "upstream_url": "https://raw.githubusercontent.com/lz4/lz4/v1.10.0/lib/lz4.h",
+      "bytes": 46014,
+      "sha256": "26b82efc53d1570f3b54eef02e9c4764c1ad374ff03cac04e2ced5ea4d4c552f"
+    },
+    {
+      "file": "xxhash.c",
+      "upstream_url": "https://raw.githubusercontent.com/lz4/lz4/v1.10.0/lib/xxhash.c",
+      "bytes": 34122,
+      "sha256": "b667033dc735fb5ea5648e0a61a2e065e5ef5bbda53669730063bd856c643c48"
+    },
+    {
+      "file": "xxhash.h",
+      "upstream_url": "https://raw.githubusercontent.com/lz4/lz4/v1.10.0/lib/xxhash.h",
+      "bytes": 13466,
+      "sha256": "aefdd236f35130495c18764cabed3f7b216906855fc5e6a9025cd2040bc84444"
+    },
+    {
+      "file": "LICENSE",
+      "upstream_url": "https://raw.githubusercontent.com/lz4/lz4/v1.10.0/lib/LICENSE",
+      "bytes": 1311,
+      "sha256": "8b58c446121a109ccf32edc094bba3010a3d85e4ee3702950db55e4d3e87736c"
+    }
+  ]
+}

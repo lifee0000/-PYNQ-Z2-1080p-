@@ -1,0 +1,19 @@
+# ==============================================================
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2026.1 (64-bit)
+# Tool Version Limit: 2026.06
+# Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+# Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+# 
+# ==============================================================
+OPTION psf_version = 2.1;
+
+BEGIN driver p6_rice_decode_slice
+
+ OPTION supported_peripherals = (p6_rice_decode_slice_v4_0 );
+ OPTION driver_state = ACTIVE;
+ OPTION copyfiles = all;
+ OPTION name = p6_rice_decode_slice;
+ OPTION version = 4.0;
+
+END driver
+

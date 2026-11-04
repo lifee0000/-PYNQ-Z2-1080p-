@@ -1,0 +1,221 @@
+{
+  "schema": 2,
+  "state": "BUILT_NOT_BOARD_VALIDATED",
+  "system": "P6_RICE03_THREE_DECODERS_V4_RICE02",
+  "top": "video_enhance_yuyv422_v4_split_core",
+  "pixel_format": "YUYV422_BT709_FULL_YUV_V4_SPLIT",
+  "clock_mhz": 100,
+  "axis_data_bits": 16,
+  "decoder_count": 3,
+  "protocol_version": 7,
+  "max_geometry": [
+    1920,
+    1080
+  ],
+  "claim_end_to_end_50fps": false,
+  "claim_end_to_end_60fps": false,
+  "timing_gate": {
+    "setup_slack_ns": 0.006,
+    "hold_slack_ns": 0.005,
+    "drc_errors": 0
+  },
+  "address_map": {
+    "axi_gpio_processing_reset": {
+      "base": 1093074944,
+      "high": 1093140479
+    },
+    "axi_vdma_file_process": {
+      "base": 1124073472,
+      "high": 1124139007
+    },
+    "video_processing_slot": {
+      "base": 1136787456,
+      "high": 1136852991
+    },
+    "rice_decoder_0": {
+      "base": 1136852992,
+      "high": 1136918527
+    },
+    "rice_decoder_1": {
+      "base": 1136918528,
+      "high": 1136984063
+    },
+    "rice_decoder_2": {
+      "base": 1136984064,
+      "high": 1137049599
+    },
+    "rice_encoder": {
+      "base": 1137049600,
+      "high": 1137115135
+    }
+  },
+  "codec_ips": {
+    "rice_encoder": {
+      "vlnv": "lifee.fpga:codec:p6_rice_encode:5.0",
+      "registers": {
+        "input_r": 16,
+        "output_r": 28,
+        "method": 40,
+        "capacity_bytes": 48,
+        "quant_shift": 56,
+        "encoded_size": 64,
+        "error_code": 80,
+        "width": 96,
+        "height": 104
+      },
+      "ip_sha256": "91be2a855215bd82d3c96563df36bf893f59912a8d27367cdf0368abecc1992d"
+    },
+    "rice_decoder_0": {
+      "vlnv": "lifee.fpga:codec:p6_rice_decode_slice:4.0",
+      "registers": {
+        "input_r": 16,
+        "output_r": 28,
+        "encoded_size": 40,
+        "capacity_bytes": 48,
+        "slice_index": 56,
+        "decoded_size": 64,
+        "error_code": 80
+      },
+      "ip_sha256": "80bf3d8628bed0fc6ce5302ba28d5e8cf9f2b32d13c180c2dcb00e023ee2c20a"
+    },
+    "rice_decoder_1": {
+      "vlnv": "lifee.fpga:codec:p6_rice_decode_slice:4.0",
+      "registers": {
+        "input_r": 16,
+        "output_r": 28,
+        "encoded_size": 40,
+        "capacity_bytes": 48,
+        "slice_index": 56,
+        "decoded_size": 64,
+        "error_code": 80
+      },
+      "ip_sha256": "80bf3d8628bed0fc6ce5302ba28d5e8cf9f2b32d13c180c2dcb00e023ee2c20a"
+    },
+    "rice_decoder_2": {
+      "vlnv": "lifee.fpga:codec:p6_rice_decode_slice:4.0",
+      "registers": {
+        "input_r": 16,
+        "output_r": 28,
+        "encoded_size": 40,
+        "capacity_bytes": 48,
+        "slice_index": 56,
+        "decoded_size": 64,
+        "error_code": 80
+      },
+      "ip_sha256": "80bf3d8628bed0fc6ce5302ba28d5e8cf9f2b32d13c180c2dcb00e023ee2c20a"
+    }
+  },
+  "registers": {
+    "width": 16,
+    "height": 24,
+    "mode": 32,
+    "brightness": 40,
+    "gain_q8_8": 48,
+    "threshold": 56,
+    "sharp_q8_8": 64,
+    "filter_enable": 72,
+    "knee_out": 80,
+    "soft_q8_8": 88,
+    "noise_floor": 96,
+    "detail_limit": 104,
+    "dark_thr": 112,
+    "light_thr": 120,
+    "roi_enable": 128,
+    "roi_x": 136,
+    "roi_y": 144,
+    "roi_width": 152,
+    "roi_height": 160,
+    "discard_startup_frame": 168,
+    "noise_floor_uv": 176,
+    "overshoot": 184,
+    "chroma_q8": 192,
+    "clarity": 200,
+    "frame_count": 208,
+    "stream_errors": 224
+  },
+  "memory_interface": {
+    "kind": "HYBRID_ACP_PACKETS_HP_FRAMES",
+    "cache_value": 15,
+    "aruser": 31,
+    "awuser": 31,
+    "master_maps": {
+      "axi_vdma_file_process/Data_MM2S": {
+        "address_block": "/processing_system7/S_AXI_HP0/HP0_DDR_LOWOCM",
+        "offset": "0x00000000",
+        "range": "512M"
+      },
+      "axi_vdma_file_process/Data_S2MM": {
+        "address_block": "/processing_system7/S_AXI_HP0/HP0_DDR_LOWOCM",
+        "offset": "0x00000000",
+        "range": "512M"
+      },
+      "rice_encoder/Data_m_axi_inmem": {
+        "address_block": "/processing_system7/S_AXI_HP0/HP0_DDR_LOWOCM",
+        "offset": "0x0000000000000000",
+        "range": "512M"
+      },
+      "rice_encoder/Data_m_axi_outmem": {
+        "address_block": "/acp_cache_attributes/S_AXI/reg0",
+        "offset": "0x0000000000000000",
+        "range": "512M"
+      },
+      "rice_decoder_0/Data_m_axi_inmem": {
+        "address_block": "/acp_cache_attributes/S_AXI/reg0",
+        "offset": "0x0000000000000000",
+        "range": "512M"
+      },
+      "rice_decoder_0/Data_m_axi_outmem": {
+        "address_block": "/processing_system7/S_AXI_HP0/HP0_DDR_LOWOCM",
+        "offset": "0x0000000000000000",
+        "range": "512M"
+      },
+      "rice_decoder_1/Data_m_axi_inmem": {
+        "address_block": "/acp_cache_attributes/S_AXI/reg0",
+        "offset": "0x0000000000000000",
+        "range": "512M"
+      },
+      "rice_decoder_1/Data_m_axi_outmem": {
+        "address_block": "/processing_system7/S_AXI_HP0/HP0_DDR_LOWOCM",
+        "offset": "0x0000000000000000",
+        "range": "512M"
+      },
+      "rice_decoder_2/Data_m_axi_inmem": {
+        "address_block": "/acp_cache_attributes/S_AXI/reg0",
+        "offset": "0x0000000000000000",
+        "range": "512M"
+      },
+      "rice_decoder_2/Data_m_axi_outmem": {
+        "address_block": "/processing_system7/S_AXI_HP0/HP0_DDR_LOWOCM",
+        "offset": "0x0000000000000000",
+        "range": "512M"
+      }
+    },
+    "bd_sha256": "cacd1ad986d01ced4ab8bc3356d6d89e8938fe55ce9305bc5175d91446887b8a",
+    "adapter_sha256": "c48c8b5a0e5ef3bbe5d3e025f3dfb478db71833b291fac9e91089f87501a650d"
+  },
+  "packages": {
+    "enhance": {
+      "source": "hardware/ips/enhance.zip",
+      "sha256": "8a36ea176f04d9c7c36e501014b8a3247145c89bff1b3396227e3a3133691171"
+    },
+    "encoder": {
+      "source": "hardware/ips/encoder.zip",
+      "sha256": "91be2a855215bd82d3c96563df36bf893f59912a8d27367cdf0368abecc1992d"
+    },
+    "decoder": {
+      "source": "hardware/ips/decoder.zip",
+      "sha256": "80bf3d8628bed0fc6ce5302ba28d5e8cf9f2b32d13c180c2dcb00e023ee2c20a"
+    }
+  },
+  "tcl_sha256": "0c18e98b4d0c922c23bf7ddece8d8b21f9e7973e226ff85c8e9951dff28371c5",
+  "artifacts": {
+    "output/file_process_rice03.bit": "d89e67017c18e03ee8eafb39b7469bc30f20785244b0ca93b680ded53950876f",
+    "output/file_process_rice03.hwh": "61bd2adb7542ec36e0402f284f6f9b93986f44d93939a447bc1e1ceb714bae78",
+    "output/rice03_v4.registers.json": "bc3066885cedbd83edf1a5ec96a1a995bb16cdff5d6a0e32e1592c8ee8f5bfb1",
+    "reports/file_process_rice03/drc.rpt": "68c904a779713e81c3ee4682fa97426537dd7144e146b071902bca5658a7bcfe",
+    "reports/file_process_rice03/timing.rpt": "d01561a7705f87781f8c93baf14317b0c5acfbfa15a2254e5dd6430ab286293b",
+    "reports/file_process_rice03/timing_gate.json": "210bf90bed839d58df8e81afec68d285ad5c7bf93a6c83ae361632251f212372",
+    "reports/file_process_rice03/utilization.rpt": "374670cda406913efb3316998516f4fceafd7797d51d8ab0c08dd4a3d7c7faa4",
+    "reports/file_process_rice03/utilization_hierarchical.rpt": "83f23efc9cf9b55dd3ccfb4549d4ea84d4b9f893b6882d6760acfa8cafc78721"
+  }
+}

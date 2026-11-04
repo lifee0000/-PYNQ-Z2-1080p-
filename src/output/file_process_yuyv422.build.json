@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "state": "BUILT_NOT_BOARD_VALIDATED",
+  "top": "video_enhance_yuyv422_v4_split_core",
+  "pixel_format": "YUYV422_BT709_FULL_YUV_V4_SPLIT",
+  "axis_data_bits": 16,
+  "bytes_per_pixel": 2,
+  "memory_interface": {
+    "kind": "ACP_COHERENT",
+    "cache_value": 15,
+    "aruser": 31,
+    "awuser": 31,
+    "ps_parameters": {
+      "pcw_use_s_axi_acp": 1,
+      "pcw_use_s_axi_hp0": 0,
+      "pcw_use_default_acp_user_val": 1,
+      "pcw_s_axi_acp_aruser_val": 31,
+      "pcw_s_axi_acp_awuser_val": 31
+    },
+    "adapter_sha256": "c48c8b5a0e5ef3bbe5d3e025f3dfb478db71833b291fac9e91089f87501a650d",
+    "reference": "https://docs.amd.com/r/en-US/ug585-zynq-7000-SoC-TRM/ACP-Requests",
+    "dma_memory_maps": {
+      "Data_MM2S": {
+        "address_block": "/acp_cache_attributes/S_AXI/reg0",
+        "offset": "0x00000000",
+        "range": "512M"
+      },
+      "Data_S2MM": {
+        "address_block": "/acp_cache_attributes/S_AXI/reg0",
+        "offset": "0x00000000",
+        "range": "512M"
+      }
+    },
+    "bd_sha256": "29a626c21f153092dd6df1c74fb29b86ebc57b7e2073233d202f392264f548b2"
+  },
+  "parameter_order": [
+    "width",
+    "height",
+    "mode",
+    "brightness",
+    "gain_q8_8",
+    "threshold",
+    "sharp_q8_8",
+    "filter_enable",
+    "knee_out",
+    "soft_q8_8",
+    "noise_floor",
+    "detail_limit",
+    "dark_thr",
+    "light_thr",
+    "roi_enable",
+    "roi_x",
+    "roi_y",
+    "roi_width",
+    "roi_height",
+    "discard_startup_frame",
+    "noise_floor_uv"
+  ],
+  "address_map": {
+    "axi_gpio_processing_reset": {
+      "base": 1093074944,
+      "high": 1093140479
+    },
+    "axi_vdma_file_process": {
+      "base": 1124073472,
+      "high": 1124139007
+    },
+    "video_processing_slot": {
+      "base": 1136787456,
+      "high": 1136852991
+    }
+  },
+  "registers": {
+    "width": 16,
+    "height": 24,
+    "mode": 32,
+    "brightness": 40,
+    "gain_q8_8": 48,
+    "threshold": 56,
+    "sharp_q8_8": 64,
+    "filter_enable": 72,
+    "knee_out": 80,
+    "soft_q8_8": 88,
+    "noise_floor": 96,
+    "detail_limit": 104,
+    "dark_thr": 112,
+    "light_thr": 120,
+    "roi_enable": 128,
+    "roi_x": 136,
+    "roi_y": 144,
+    "roi_width": 152,
+    "roi_height": 160,
+    "discard_startup_frame": 168,
+    "noise_floor_uv": 176,
+    "frame_count": 184,
+    "stream_errors": 200
+  },
+  "pair_loop_ii": 2,
+  "pixels_per_iteration": 2,
+  "timing_gate": {
+    "setup_slack_ns": 0.34,
+    "hold_slack_ns": 0.019,
+    "drc_errors": 0
+  },
+  "claim_end_to_end_50fps": false,
+  "artifacts": {
+    "output\\file_process_yuyv422.bit": "c1aa5d83451acd82c8960f6fa10ded49a0f90fba9b1c852f23a159333b76c18c",
+    "output\\file_process_yuyv422.hwh": "0d24ba7b53427d4703b662f79e897e240f5ffe55532bbde59e1b7eb38c1f3e23",
+    "output\\yuyv422_v4.registers.json": "623c35c21cdc44cf7e841780afd3974ad8a6ba33a526259781104bd8d31eb2dc",
+    "output\\video_enhance_yuyv422_v4_split_core.zip": "a31873fbf64b2c99f326aa12c4c1cd30b0e353dbd17027863a6cd422619473d4",
+    "build\\yuyv422_v4_split_hls\\solution1\\sim\\report\\video_enhance_yuyv422_v4_split_core_cosim.rpt": "613f986a2081c363932f0a12a52db62fb74bf0fd637d171014314ae86ce487c2",
+    "build\\yuyv422_v4_split_hls\\solution1\\syn\\report\\video_enhance_yuyv422_v4_split_core_Pipeline_PAIRS_csynth.xml": "0008d3461194056abc4ba27423be1c43c41915df8ee44c626a1e64086cd037cf",
+    "reports\\file_process_yuyv422\\timing.rpt": "415fe474cff5493a9e9d3f75fb2fbfdba2fad223f31ed146d75d3b1ce5822513",
+    "reports\\file_process_yuyv422\\utilization.rpt": "022bc299213bcaaef360b92716b62456276a22db43e0c56b8f65212ee729ae51",
+    "reports\\file_process_yuyv422\\drc.rpt": "5473f571ab7be47d0d80fe9e08ae238bdfa3f430429b7d99a004779c0802212b",
+    "reports\\file_process_yuyv422\\timing_gate.json": "1878254fb09940daf58c1feebbc16537aa981a661c49f3dc3cadbfba8c09eda5"
+  },
+  "source_sha256": {
+    "rtl\\axi_acp_cache.v": "c48c8b5a0e5ef3bbe5d3e025f3dfb478db71833b291fac9e91089f87501a650d",
+    "hls\\spatial_v4.cpp": "c93704a5c68cfd3ed40d95c53b04b4b02e4e0e76fd47b7da93feb58e7f89f693",
+    "hls\\spatial_v4.h": "1e32589e58112c1ad2e57685caf83c91a72d093fa1a75e70c147abf8d99e2b75",
+    "hls\\testbench.cpp": "07c302bb0403020b421da319b5c53d21bb5e4b54c017c06c68e1c7cb90d5ed10",
+    "hls\\vectors.h": "10f485ac104be4adfc010dd4bc38c5c77edc0e10ed7f2b7e161d5822f1c8e802",
+    "reference.py": "3db3050987982d6d6a01926e4909edc41abc9c037d79048689e0974ebacba21a",
+    "build_hls.tcl": "0b7cb8cb9689446ebe3b49690aa025815a40a4d351f541189f239bda38d327b6",
+    "tcl\\build_file_process_yuyv422.tcl": "c58f2bb26008ead9aa30e7df742bdee0a5cf10f93f7f6f734a44d4a2e47fd830",
+    "prepare_vivado.py": "1c464c6d1049a23cf3c87d066cde92f901dcbb51fc9683531b0a04c1e488f251",
+    "finalize_vivado.py": "678931a74d4cd771516a5f9c3220822ff6fd34eb7ce6935a8bf92f3984866f87",
+    "build_vivado_windows.ps1": "b0d466802245a356ba75ae219285b20573fd5ecd5d02167404bffd482b71a702"
+  }
+}

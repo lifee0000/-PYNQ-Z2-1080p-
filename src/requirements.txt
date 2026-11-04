@@ -1,0 +1,4 @@
+numpy>=2.0
+av>=16.0
+Pillow>=12.0
+websocket-client>=1.8.0

@@ -1,0 +1,19 @@
+# ==============================================================
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2026.1 (64-bit)
+# Tool Version Limit: 2026.06
+# Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+# Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+# 
+# ==============================================================
+OPTION psf_version = 2.1;
+
+BEGIN driver video_enhance_yuyv422_v4_split_core
+
+ OPTION supported_peripherals = (video_enhance_yuyv422_v4_split_core_v1_5 );
+ OPTION driver_state = ACTIVE;
+ OPTION copyfiles = all;
+ OPTION name = video_enhance_yuyv422_v4_split_core;
+ OPTION version = 1.5;
+
+END driver
+
